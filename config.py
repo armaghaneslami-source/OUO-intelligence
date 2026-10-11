@@ -2,7 +2,7 @@
 # Edit this file to customize what gets monitored
 
 # Your email for the weekly digest
-EMAIL_TO = "your.email@gmail.com"  # Change this to your email
+EMAIL_TO = "armaghan.eslami@gmail.com"  # Change this to your email
 
 # Keywords to match relevant jobs and news
 KEYWORDS = [
