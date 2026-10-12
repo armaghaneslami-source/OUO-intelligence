@@ -142,11 +142,11 @@ body {
 }
 .matrix-col-header {
   font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--fg-2);
+  color: var(--fg);
   text-align: center;
   padding: 6px 0;
   border-bottom: 2px solid var(--border);
@@ -179,11 +179,11 @@ body {
 }
 .quadrant-row-header {
   font-family: var(--mono);
-  font-size: 9px;
-  font-weight: 500;
+  font-size: 11px;
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--fg-3);
+  color: var(--fg-2);
   padding: 2px 0 6px 0;
   border-bottom: 1px solid var(--border);
   margin-bottom: 2px;
@@ -223,7 +223,7 @@ body {
 .dot-error { background: var(--error); }
 
 .org-name {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--fg);
   font-weight: 500;
   white-space: nowrap;
@@ -237,7 +237,7 @@ body {
 
 .org-keywords {
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 10px;
   color: var(--fg-3);
   white-space: nowrap;
   overflow: hidden;
@@ -356,15 +356,18 @@ body {
 }
 
 @media (max-width: 480px) {
-  .matrix-col-header { font-size: 10px; }
-  .org-name { font-size: 11px; }
+  .matrix-col-header { font-size: 15px; }
+  .quadrant-row-header { font-size: 12px; }
+  .org-name { font-size: 14px; }
+  .org-keywords { font-size: 11px; }
   .stat-pills { gap: 5px; }
+  .pill { font-size: 12px; }
 }
 </style>
 
 <div class="header">
   <div class="header-left">
-    <span class="header-title">OUO Intelligence</span>
+    <span class="header-title">🦚 OUO Intelligence</span>
     <span class="header-subtitle" id="scan-date-header">loading...</span>
   </div>
   <div class="stat-pills">
