@@ -1,0 +1,777 @@
+<title>OUO Intelligence</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: sticky header + 2x2 matrix + news table, stacks to single column on mobile */
+:root {
+  --bg: #f7f7f5;
+  --surface: #ffffff;
+  --border: #e2e1dc;
+  --fg: #1a1a18;
+  --fg-2: #5a5a54;
+  --fg-3: #9a9a90;
+  --accent: #2c5f2e;
+  --relevant: #2c5f2e;
+  --relevant-bg: #edf4ed;
+  --relevant-border: #b8d9b9;
+  --nothing: #9a9a90;
+  --nothing-bg: #f4f4f2;
+  --nothing-border: #e2e1dc;
+  --error: #8b2c2c;
+  --error-bg: #fdf0f0;
+  --mono: 'IBM Plex Mono', monospace;
+  --sans: 'IBM Plex Sans', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141412;
+    --surface: #1e1e1b;
+    --border: #2e2e28;
+    --fg: #f0f0ec;
+    --fg-2: #a0a098;
+    --fg-3: #606058;
+    --accent: #7ab87c;
+    --relevant: #7ab87c;
+    --relevant-bg: #1a2e1a;
+    --relevant-border: #2e4e2e;
+    --nothing: #606058;
+    --nothing-bg: #1e1e1b;
+    --nothing-border: #2e2e28;
+    --error: #d47070;
+    --error-bg: #2e1a1a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141412;
+  --surface: #1e1e1b;
+  --border: #2e2e28;
+  --fg: #f0f0ec;
+  --fg-2: #a0a098;
+  --fg-3: #606058;
+  --accent: #7ab87c;
+  --relevant: #7ab87c;
+  --relevant-bg: #1a2e1a;
+  --relevant-border: #2e4e2e;
+  --nothing: #606058;
+  --nothing-bg: #1e1e1b;
+  --nothing-border: #2e2e28;
+  --error: #d47070;
+  --error-bg: #2e1a1a;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--fg);
+  margin: 0;
+  padding: 0 16px;
+  padding-block: 0;
+  min-height: 100%;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.header-left { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.header-title {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--fg);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.header-subtitle {
+  font-size: 11px;
+  color: var(--fg-3);
+  font-family: var(--mono);
+}
+.stat-pills { display: flex; gap: 8px; }
+.pill {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid;
+  font-variant-numeric: tabular-nums;
+}
+.pill-green { color: var(--relevant); background: var(--relevant-bg); border-color: var(--relevant-border); }
+.pill-grey { color: var(--fg-3); background: var(--nothing-bg); border-color: var(--nothing-border); }
+
+/* Main layout */
+.main { padding-block: 20px; display: flex; flex-direction: column; gap: 24px; }
+
+/* Section label */
+.section-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  margin-bottom: 10px;
+}
+
+/* Matrix */
+.matrix { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 12px; }
+.matrix-header-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-left: 0;
+}
+.matrix-wrapper { display: flex; flex-direction: column; gap: 0; }
+.matrix-col-headers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding-bottom: 6px;
+}
+.matrix-col-header {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+  text-align: center;
+  padding: 6px 0;
+  border-bottom: 2px solid var(--border);
+}
+.matrix-rows { display: flex; flex-direction: column; gap: 12px; }
+.matrix-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+.row-label-wrap { display: flex; align-items: flex-start; gap: 0; }
+.row-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+  writing-mode: horizontal-tb;
+  padding: 8px 0 0 0;
+  min-width: 0;
+}
+
+/* Quadrant */
+.quadrant {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.quadrant-row-header {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  padding: 2px 0 6px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2px;
+}
+
+/* Org block */
+.org-block {
+  border-radius: 5px;
+  border: 1px solid transparent;
+  overflow: hidden;
+  margin-bottom: 2px;
+}
+.org-block.relevant { background: var(--relevant-bg); border-color: var(--relevant-border); }
+.org-block.nothing { background: transparent; border-color: transparent; }
+.org-block.error { background: var(--error-bg); border-color: transparent; }
+
+.org-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 6px;
+  text-decoration: none;
+  cursor: default;
+  min-width: 0;
+}
+.org-block.relevant .org-item { cursor: pointer; }
+.org-block.relevant .org-item:hover { filter: brightness(0.96); }
+.org-block.nothing .org-item:hover { background: var(--bg); border-radius: 5px; }
+
+.dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.dot-relevant { background: var(--relevant); }
+.dot-nothing { background: var(--nothing-border); }
+.dot-error { background: var(--error); }
+
+.org-name {
+  font-size: 12px;
+  color: var(--fg);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  min-width: 0;
+}
+.org-block.relevant .org-name { color: var(--relevant); }
+.org-block.error .org-name { color: var(--error); }
+
+.org-keywords {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--fg-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80px;
+}
+.org-block.relevant .org-keywords { color: var(--relevant); opacity: 0.8; }
+
+.org-chevron {
+  font-size: 9px;
+  color: var(--relevant);
+  flex-shrink: 0;
+  transition: transform 0.15s;
+}
+.org-block.open .org-chevron { transform: rotate(90deg); }
+
+/* Postings list */
+.postings-list {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--relevant-border);
+}
+.org-block.open .postings-list { display: flex; }
+.posting-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 6px 8px 6px 20px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--relevant-border);
+  transition: background 0.1s;
+}
+.posting-item:last-child { border-bottom: none; }
+.posting-item:hover { background: var(--relevant-border); }
+.posting-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.posting-title {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--fg);
+  line-height: 1.4;
+}
+.posting-deadline {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--relevant);
+  opacity: 0.8;
+}
+.posting-arrow { font-size: 10px; color: var(--relevant); flex-shrink: 0; padding-top: 2px; }
+
+/* News section */
+.news-table {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.news-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  transition: background 0.1s;
+}
+.news-item:last-child { border-bottom: none; }
+.news-item:hover { background: var(--bg); }
+.news-index {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--fg-3);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+  padding-top: 2px;
+  width: 16px;
+}
+.news-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.news-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--fg);
+  line-height: 1.4;
+}
+.news-meta {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--fg-3);
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.news-arrow {
+  font-size: 12px;
+  color: var(--fg-3);
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+/* Scan date */
+.scan-date {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--fg-3);
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+/* Empty state */
+.empty-state {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--fg-3);
+  padding: 16px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .matrix-col-header { font-size: 10px; }
+  .org-name { font-size: 11px; }
+  .stat-pills { gap: 5px; }
+}
+</style>
+
+<div class="header">
+  <div class="header-left">
+    <span class="header-title">OUO Intelligence</span>
+    <span class="header-subtitle" id="scan-date-header">loading...</span>
+  </div>
+  <div class="stat-pills">
+    <span class="pill pill-green" id="pill-relevant">— relevant</span>
+    <span class="pill pill-grey" id="pill-total">— total</span>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- Matrix -->
+  <div>
+    <div class="section-label">Scan Results</div>
+    <div class="matrix-wrapper">
+      <div class="matrix-col-headers">
+        <div class="matrix-col-header">Japan</div>
+        <div class="matrix-col-header">Europe</div>
+      </div>
+      <div class="matrix-rows">
+        <!-- Academia row -->
+        <div class="matrix-row">
+          <div class="quadrant">
+            <div class="quadrant-row-header">Academia</div>
+            <div id="q-japan-academia"></div>
+          </div>
+          <div class="quadrant">
+            <div class="quadrant-row-header">Academia</div>
+            <div id="q-europe-academia"></div>
+          </div>
+        </div>
+        <!-- Industry row -->
+        <div class="matrix-row">
+          <div class="quadrant">
+            <div class="quadrant-row-header">Industry / Think Tank</div>
+            <div id="q-japan-industry"></div>
+          </div>
+          <div class="quadrant">
+            <div class="quadrant-row-header">Industry / Think Tank</div>
+            <div id="q-europe-industry"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- News -->
+  <div>
+    <div class="section-label">News</div>
+    <div class="news-table" id="news-container">
+      <div class="empty-state">Loading...</div>
+    </div>
+  </div>
+
+  <div class="scan-date" id="scan-date-footer"></div>
+</div>
+
+<script>
+// ── QUADRANT CLASSIFICATION ──────────────────────────────────────────────────
+// Each org name maps to { region: 'japan'|'europe', type: 'academia'|'industry' }
+const ORG_MAP = {
+  // Japan academia
+  "UTokyo - main jobs page": { region: "japan", type: "academia" },
+  "UTokyo Tokyo College (interdisciplinary, English)": { region: "japan", type: "academia" },
+  "UTokyo PARI": { region: "japan", type: "academia" },
+  "UTokyo Institute for Future Initiatives": { region: "japan", type: "academia" },
+  "Hitotsubashi University jobs": { region: "japan", type: "academia" },
+  "Waseda University jobs": { region: "japan", type: "academia" },
+  "Waseda Institute for Advanced Study (WIAS)": { region: "japan", type: "academia" },
+  "Keio University jobs": { region: "japan", type: "academia" },
+  "Sophia University jobs": { region: "japan", type: "academia" },
+  "ICU jobs": { region: "japan", type: "academia" },
+  "Meiji University jobs": { region: "japan", type: "academia" },
+  "Ritsumeikan APU jobs": { region: "japan", type: "academia" },
+  "Rikkyo University jobs": { region: "japan", type: "academia" },
+  "Temple University Japan jobs": { region: "japan", type: "academia" },
+  "Tokyo Tech / Institute of Science Tokyo jobs": { region: "japan", type: "academia" },
+  "Chuo University jobs": { region: "japan", type: "academia" },
+  "GRIPS": { region: "japan", type: "academia" },
+  // Japan postdoc boards as academia
+  "JREC-IN Portal (main Japan academic jobs board)": { region: "japan", type: "academia" },
+  "JREC-IN Social Science filter": { region: "japan", type: "academia" },
+  "Daigaku Jobs (Japanese board)": { region: "japan", type: "academia" },
+  "Times Higher Education Japan": { region: "japan", type: "academia" },
+  // Japan industry / think tank
+  "ILO Tokyo": { region: "japan", type: "industry" },
+  "UN University": { region: "japan", type: "industry" },
+  "OECD Tokyo": { region: "japan", type: "industry" },
+  "RIETI": { region: "japan", type: "industry" },
+  "Recruit Works Institute": { region: "japan", type: "industry" },
+  "Asia Pacific Initiative": { region: "japan", type: "industry" },
+  "Mercari R4D": { region: "japan", type: "industry" },
+  "JILPT": { region: "japan", type: "industry" },
+  // Europe academia
+  "KU Leuven": { region: "europe", type: "academia" },
+  "Ghent University": { region: "europe", type: "academia" },
+  "Vrije Universiteit Brussel": { region: "europe", type: "academia" },
+  "Radboud University": { region: "europe", type: "academia" },
+  "University of Amsterdam": { region: "europe", type: "academia" },
+  "Tilburg University": { region: "europe", type: "academia" },
+  "Erasmus University Rotterdam": { region: "europe", type: "academia" },
+  "Delft University of Technology": { region: "europe", type: "academia" },
+  "TU Munich": { region: "europe", type: "academia" },
+  "LMU Munich": { region: "europe", type: "academia" },
+  "University of Cologne": { region: "europe", type: "academia" },
+  "Humboldt University Berlin": { region: "europe", type: "academia" },
+  "University of Vienna": { region: "europe", type: "academia" },
+  "WU Vienna": { region: "europe", type: "academia" },
+  "University of Graz": { region: "europe", type: "academia" },
+  "TU Graz": { region: "europe", type: "academia" },
+  // Postdoc boards -> Europe academia
+  "Euraxess": { region: "europe", type: "academia" },
+  "Academic Positions": { region: "europe", type: "academia" },
+  "Nature Careers": { region: "europe", type: "academia" },
+  "ResearchGate Jobs": { region: "europe", type: "academia" },
+  "Times Higher Education": { region: "europe", type: "academia" },
+  "Academic Transfer (NL)": { region: "europe", type: "academia" },
+  "Find a Postdoc": { region: "europe", type: "academia" },
+  "Jobs.ac.uk": { region: "europe", type: "academia" },
+  "EuroBrussels": { region: "europe", type: "academia" },
+  "CORDIS (Horizon Europe projects)": { region: "europe", type: "academia" },
+  "JREC-IN": { region: "japan", type: "academia" },
+  // Europe industry / think tank
+  "CEPS": { region: "europe", type: "industry" },
+  "ETUI": { region: "europe", type: "industry" },
+  "Bruegel": { region: "europe", type: "industry" },
+  "TNO": { region: "europe", type: "industry" },
+  "Rathenau": { region: "europe", type: "industry" },
+  "AIAS-HSI (UvA)": { region: "europe", type: "industry" },
+  "IHS Vienna": { region: "europe", type: "industry" },
+  "WIFO": { region: "europe", type: "industry" },
+  "Bertelsmann Stiftung": { region: "europe", type: "industry" },
+  "NESTA": { region: "europe", type: "industry" },
+  "AlgorithmWatch": { region: "europe", type: "industry" },
+  "Fraunhofer IAO": { region: "europe", type: "industry" },
+  "Fraunhofer ISI": { region: "europe", type: "industry" },
+  "SINTEF": { region: "europe", type: "industry" },
+  "VTT": { region: "europe", type: "industry" },
+  "JRC (European Commission)": { region: "europe", type: "industry" },
+  "EUROFOUND": { region: "europe", type: "industry" },
+  "CEDEFOP": { region: "europe", type: "industry" },
+  "EU-OSHA": { region: "europe", type: "industry" },
+};
+
+// ── SAMPLE DATA (replace with real results.json from GitHub) ──────────────────
+// This is what a real results.json looks like after scanner.py runs.
+// When you host this on GitHub Pages, replace loadData() to fetch results.json.
+const SAMPLE_DATA = {
+  "scan_date": "2026-10-11T22:00:00",
+  "europe_jobs": [
+    { "name": "CEPS", "url": "https://www.ceps.eu/vacancies/", "keywords_found": ["future of work", "ELSI"], "status": "RELEVANT",
+      "postings_found": [
+        { "title": "Researcher — Future of Work Programme", "url": "https://www.ceps.eu/vacancies/", "deadline": "15 November 2026" }
+      ]
+    },
+    { "name": "ETUI", "url": "https://www.etui.org/about-etui/working-etui", "keywords_found": ["algorithmic management", "digital work"], "status": "RELEVANT",
+      "postings_found": [
+        { "title": "Senior Researcher, Digital Work and AI Governance", "url": "https://www.etui.org/about-etui/working-etui", "deadline": "30 October 2026" }
+      ]
+    },
+    { "name": "Bruegel", "url": "https://www.bruegel.org/careers", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+    { "name": "TNO", "url": "https://www.tno.nl/en/careers/vacancies/", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+    { "name": "Rathenau", "url": "https://www.rathenau.nl/en/about-rathenau/vacancies", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+    { "name": "AIAS-HSI (UvA)", "url": "https://www.uva.nl", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+    { "name": "IHS Vienna", "url": "https://www.ihs.ac.at/about-ihs/vacancies/", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+    { "name": "WIFO", "url": "https://www.wifo.ac.at/en/jobs", "keywords_found": ["labor market"], "status": "RELEVANT",
+      "postings_found": [
+        { "title": "Research Associate — Labour Markets and Digitalisation", "url": "https://www.wifo.ac.at/en/jobs", "deadline": null }
+      ]
+    },
+    { "name": "AlgorithmWatch", "url": "https://algorithmwatch.org/en/jobs", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+    { "name": "Bertelsmann Stiftung", "url": "https://www.bertelsmann-stiftung.de/en/careers", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+    { "name": "EUROFOUND", "url": "https://www.eurofound.europa.eu/en/pages/vacancies", "keywords_found": ["future of work"], "status": "RELEVANT",
+      "postings_found": [
+        { "title": "Research Officer, Future of Work", "url": "https://www.eurofound.europa.eu/en/pages/vacancies", "deadline": "20 November 2026" }
+      ]
+    },
+  ],
+  "europe_universities": [
+    { "name": "KU Leuven", "url": "https://www.kuleuven.be/personeel/jobsite/jobs/staff", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+    { "name": "University of Amsterdam", "url": "https://werkenbij.uva.nl/", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+    { "name": "WU Vienna", "url": "https://www.wu.ac.at/en/careers/careers-at-wu/current-job-openings", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+    { "name": "Radboud University", "url": "https://www.ru.nl/en/working-at", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+  ],
+  "japan_jobs": [
+    { "name": "ILO Tokyo", "url": "https://www.ilo.org/tokyo", "keywords_found": ["future of work", "labor market"], "status": "RELEVANT",
+      "postings_found": [
+        { "title": "Research Officer — Future of Work, Tokyo Office", "url": "https://www.ilo.org/tokyo", "deadline": null }
+      ]
+    },
+    { "name": "UN University", "url": "https://careers.unu.edu/", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+    { "name": "Mercari R4D", "url": "https://r4d.mercari.com/en/careers/", "keywords_found": ["ELSI", "AI ethics"], "status": "RELEVANT",
+      "postings_found": [
+        { "title": "Research Scientist — ELSI", "url": "https://apply.workable.com/mercari/j/F43FEBC242/", "deadline": null }
+      ]
+    },
+    { "name": "GRIPS", "url": "https://www.grips.ac.jp/en/", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+    { "name": "RIETI", "url": "https://www.rieti.go.jp/en", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+  ],
+  "japan_universities": [
+    { "name": "Waseda University jobs", "url": "https://www.waseda.jp/top/en/about/work/job-openings", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+    { "name": "Sophia University jobs", "url": "https://www.sophia.ac.jp/eng/work/careers/", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+    { "name": "ICU jobs", "url": "https://www.icu.ac.jp/en/about/employment/", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+  ],
+  "japan_academic_boards": [
+    { "name": "JREC-IN", "url": "https://jrecin.jst.go.jp/seek/SeekTop?ln=1", "keywords_found": ["organizational psychology", "researcher"], "status": "RELEVANT",
+      "postings_found": [
+        { "title": "Postdoctoral Researcher — Organizational Behavior", "url": "https://jrecin.jst.go.jp/seek/SeekTop?ln=1", "deadline": "31 October 2026" },
+        { "title": "Assistant Professor — Human-Computer Interaction", "url": "https://jrecin.jst.go.jp/seek/SeekTop?ln=1", "deadline": "15 November 2026" }
+      ]
+    },
+  ],
+  "postdoc_boards": [
+    { "name": "Euraxess", "url": "https://euraxess.ec.europa.eu/jobs/search", "keywords_found": ["researcher", "postdoc"], "status": "RELEVANT",
+      "postings_found": [
+        { "title": "Postdoctoral Fellow — AI and Society", "url": "https://euraxess.ec.europa.eu/jobs/search", "deadline": "1 December 2026" }
+      ]
+    },
+    { "name": "Academic Positions", "url": "https://academicpositions.com", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
+  ],
+  "news": [
+    { "title": "EU AI Act reshapes how companies manage algorithmic decision-making at work", "link": "https://www.euractiv.com/", "published": "Sun, 11 Oct 2026 08:00:00 GMT", "query": "algorithmic management research" },
+    { "title": "ETUI publishes new report on platform workers and digital surveillance", "link": "https://www.etui.org/", "published": "Sat, 10 Oct 2026 12:00:00 GMT", "query": "ETUI digital work" },
+    { "title": "ILO calls for stronger global frameworks on AI governance in workplaces", "link": "https://www.ilo.org/", "published": "Fri, 09 Oct 2026 09:00:00 GMT", "query": "ILO future of work AI" },
+    { "title": "Mercari R4D researchers examine ELSI implications of recommendation systems", "link": "https://r4d.mercari.com/", "published": "Thu, 08 Oct 2026 06:00:00 GMT", "query": "Mercari R4D ELSI" },
+    { "title": "CEPS Future of Work unit hosts symposium on human-AI collaboration", "link": "https://www.ceps.eu/", "published": "Wed, 07 Oct 2026 10:00:00 GMT", "query": "CEPS future of work" },
+  ]
+};
+
+// ── RENDER ───────────────────────────────────────────────────────────────────
+function classify(name) {
+  return ORG_MAP[name] || { region: "europe", type: "industry" };
+}
+
+function makeOrgItem(org) {
+  const isRelevant = org.status === "RELEVANT";
+  const isError = org.status && org.status.startsWith("error");
+  const blockCls = isRelevant ? "relevant" : isError ? "error" : "nothing";
+  const dotCls = isRelevant ? "dot-relevant" : isError ? "dot-error" : "dot-nothing";
+  const keywords = org.keywords_found && org.keywords_found.length
+    ? org.keywords_found.slice(0, 2).join(", ")
+    : "";
+  const postings = org.postings_found || [];
+  const hasPostings = isRelevant && postings.length > 0;
+
+  const block = document.createElement("div");
+  block.className = `org-block ${blockCls}`;
+
+  // Header row — links to org page if no postings, toggles if postings exist
+  const headerEl = document.createElement(hasPostings ? "div" : "a");
+  headerEl.className = "org-item";
+  if (!hasPostings) {
+    headerEl.href = org.url || "#";
+    headerEl.target = "_blank";
+    headerEl.rel = "noopener noreferrer";
+  }
+  headerEl.innerHTML = `
+    <span class="dot ${dotCls}"></span>
+    <span class="org-name">${org.name}</span>
+    ${keywords ? `<span class="org-keywords">${keywords}</span>` : ""}
+    ${hasPostings ? `<span class="org-chevron">▶</span>` : ""}
+  `;
+
+  if (hasPostings) {
+    headerEl.addEventListener("click", () => {
+      block.classList.toggle("open");
+    });
+  }
+
+  block.appendChild(headerEl);
+
+  // Postings list
+  if (hasPostings) {
+    const list = document.createElement("div");
+    list.className = "postings-list";
+    postings.forEach(p => {
+      const a = document.createElement("a");
+      a.className = "posting-item";
+      a.href = p.url || org.url || "#";
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.innerHTML = `
+        <span class="posting-body">
+          <span class="posting-title">${p.title}</span>
+          ${p.deadline ? `<span class="posting-deadline">Deadline: ${p.deadline}</span>` : ""}
+        </span>
+        <span class="posting-arrow">↗</span>
+      `;
+      list.appendChild(a);
+    });
+    block.appendChild(list);
+  }
+
+  return block;
+}
+
+function renderMatrix(data) {
+  const quadrants = {
+    "japan-academia": document.getElementById("q-japan-academia"),
+    "japan-industry": document.getElementById("q-japan-industry"),
+    "europe-academia": document.getElementById("q-europe-academia"),
+    "europe-industry": document.getElementById("q-europe-industry"),
+  };
+
+  // Clear
+  Object.values(quadrants).forEach(q => q.innerHTML = "");
+
+  const allOrgs = [
+    ...(data.europe_jobs || []),
+    ...(data.europe_universities || []),
+    ...(data.japan_jobs || []),
+    ...(data.japan_universities || []),
+    ...(data.japan_academic_boards || []),
+    ...(data.postdoc_boards || []),
+  ];
+
+  // Sort: relevant first within each quadrant
+  allOrgs.sort((a, b) => {
+    const aR = a.status === "RELEVANT" ? 0 : 1;
+    const bR = b.status === "RELEVANT" ? 0 : 1;
+    return aR - bR;
+  });
+
+  let relevantCount = 0;
+  let totalCount = 0;
+
+  allOrgs.forEach(org => {
+    const { region, type } = classify(org.name);
+    const key = `${region}-${type}`;
+    const container = quadrants[key];
+    if (!container) return;
+    container.appendChild(makeOrgItem(org));
+    totalCount++;
+    if (org.status === "RELEVANT") relevantCount++;
+  });
+
+  // Empty state for empty quadrants
+  Object.values(quadrants).forEach(q => {
+    if (!q.children.length) {
+      q.innerHTML = '<div class="empty-state">No data yet</div>';
+    }
+  });
+
+  // Pills
+  document.getElementById("pill-relevant").textContent = `${relevantCount} relevant`;
+  document.getElementById("pill-total").textContent = `${totalCount} scanned`;
+}
+
+function renderNews(data) {
+  const container = document.getElementById("news-container");
+  const news = data.news || [];
+
+  if (!news.length) {
+    container.innerHTML = '<div class="empty-state">No news items found</div>';
+    return;
+  }
+
+  container.innerHTML = "";
+  news.forEach((item, i) => {
+    const a = document.createElement("a");
+    a.href = item.link || "#";
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.className = "news-item";
+
+    const dateStr = item.published
+      ? new Date(item.published).toLocaleDateString("en-GB", { day: "numeric", month: "short" })
+      : "";
+    const query = item.query || "";
+
+    a.innerHTML = `
+      <span class="news-index">${String(i + 1).padStart(2, "0")}</span>
+      <span class="news-body">
+        <span class="news-title">${item.title}</span>
+        <span class="news-meta">
+          ${dateStr ? `<span>${dateStr}</span>` : ""}
+          ${query ? `<span>${query}</span>` : ""}
+        </span>
+      </span>
+      <span class="news-arrow">↗</span>
+    `;
+    container.appendChild(a);
+  });
+}
+
+function renderDate(data) {
+  if (!data.scan_date) return;
+  const d = new Date(data.scan_date);
+  const str = d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" });
+  document.getElementById("scan-date-header").textContent = `last scan: ${str}`;
+  document.getElementById("scan-date-footer").textContent = `OUO Intelligence · scanned ${str}`;
+}
+
+async function loadData() {
+  try {
+    const res = await fetch("results.json");
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const data = await res.json();
+    return data;
+  } catch (e) {
+    console.warn("Could not load results.json, using sample data:", e);
+    return SAMPLE_DATA;
+  }
+}
+
+loadData().then(data => {
+  renderDate(data);
+  renderMatrix(data);
+  renderNews(data);
+});
+</script>
