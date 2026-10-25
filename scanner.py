@@ -226,6 +226,9 @@ def run_scan():
         "japan_academic_boards": [],
         "postdoc_boards": [],
         "news": [],
+        "europe_orgs_expanded": [],
+        "japan_orgs_expanded": [],
+        "postdoc_boards_expanded": [],
     }
 
     sections = [
