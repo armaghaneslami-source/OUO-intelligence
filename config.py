@@ -117,3 +117,111 @@ NEWS_SOURCES = [
     "postdoc organizational psychology AI",
     "researcher vacancy ELSI ethics",
 ]
+# ── EUROPE: EXPANDED (new directions) ─────────────────────────────────────────
+
+EUROPE_ORGS_EXPANDED = {
+
+    # Labor economics & policy research institutes
+    "IZA Institute of Labor Economics (Bonn)": "https://www.iza.org/en/jobs",
+    "CPB Netherlands Bureau for Economic Policy Analysis": "https://www.cpb.nl/en/vacancies",
+    "DIW Berlin (German Institute for Economic Research)": "https://www.diw.de/en/diw_01.c.100406.en/jobs.html",
+    "IFAU Sweden (labour market policy evaluation)": "https://www.ifau.se/en/About-IFAU/Vacancies/",
+    "IAB Germany (Institute for Employment Research)": "https://www.iab.de/en/iab/jobs.aspx",
+    "WZB Berlin Social Science Center": "https://www.wzb.eu/en/jobs",
+    "ZEW Mannheim (Centre for European Economic Research)": "https://www.zew.de/en/about-zew/careers",
+    "LISER Luxembourg (work, health, labour market)": "https://www.liser.lu/jobs.cfm",
+
+    # International organizations
+    "OECD careers": "https://www.oecd.org/careers/",
+    "ILO Geneva careers": "https://www.ilo.org/global/about-the-ilo/employment/lang--en/index.htm",
+    "World Bank jobs": "https://jobs.worldbank.org/",
+    "Eurofound": "https://www.eurofound.europa.eu/en/about-eurofound/recruitment",
+    "EU-OSHA": "https://osha.europa.eu/en/about-eu-osha/jobs-and-traineeships",
+    "CEDEFOP": "https://www.cedefop.europa.eu/en/about-cedefop/procurement-and-grants/vacancies",
+
+    # National statistics & government labor research
+    "CBS Statistics Netherlands": "https://www.werkenbijhetcbs.nl/",
+    "ONS UK Office for National Statistics": "https://www.ons.gov.uk/aboutus/careers",
+    "Destatis Germany Federal Statistical Office": "https://www.destatis.de/EN/About-Us/Careers/_node.html",
+    "Statistik Austria": "https://www.statistik.at/en/about-us/careers",
+
+    # Survey & social research firms
+    "Ipsos careers": "https://www.ipsos.com/en/careers",
+    "Kantar careers": "https://kantar.com/careers",
+    "GfK careers": "https://www.gfk.com/careers",
+    "Gallup careers": "https://www.gallup.com/careers/home.aspx",
+
+    # Consulting research arms
+    "BCG Henderson Institute careers": "https://www.bcg.com/careers",
+    "Deloitte Human Capital research careers": "https://www2.deloitte.com/global/en/pages/careers/articles/join-deloitte.html",
+
+    # People analytics in large companies
+    "Philips careers": "https://www.philips.com/a-w/careers.html",
+    "Unilever careers": "https://careers.unilever.com/",
+    "ING Group careers": "https://www.ing.jobs/global/careers.htm",
+    "Spotify jobs": "https://www.lifeatspotify.com/jobs",
+    "Booking.com careers": "https://careers.booking.com/",
+
+    # Program evaluation & impact research
+    "3ie International Initiative for Impact Evaluation": "https://www.3ieimpact.org/about-3ie/work-3ie",
+    "J-PAL Europe": "https://www.povertyactionlab.org/careers",
+    "Mathematica careers": "https://www.mathematica.org/career-opportunities",
+    "ICF International Europe": "https://www.icf.com/careers",
+
+    # HR research & workforce consulting
+    "Mercer careers": "https://careers.mercer.com/",
+    "Willis Towers Watson careers": "https://careers.wtwco.com/",
+    "Korn Ferry careers": "https://www.kornferry.com/careers",
+}
+
+
+# ── JAPAN: EXPANDED (new directions) ──────────────────────────────────────────
+
+JAPAN_ORGS_EXPANDED = {
+
+    # Labor & workforce research
+    "JILPT Japan Institute for Labour Policy and Training": "https://www.jil.go.jp/english/",
+    "RIETI Research Institute of Economy Trade and Industry": "https://www.rieti.go.jp/en/about/recruitment.html",
+    "NLI Research Institute": "https://www.nli-research.co.jp/en/",
+    "Japan Productivity Center": "https://www.jpc-net.jp/",
+
+    # International orgs Tokyo offices
+    "OECD Tokyo Centre": "https://www.oecd.org/tokyo/",
+    "World Bank Tokyo office": "https://www.worldbank.org/en/country/japan",
+    "UNDP Japan": "https://www.undp.org/japan",
+    "UNICEF Japan": "https://www.unicef.or.jp/about_unicef/about_job.html",
+
+    # People analytics & HR research
+    "Recruit Works Institute": "https://www.works-i.com/",
+    "Persol Research and Consulting": "https://rc.persol-group.co.jp/",
+    "Pasona Group": "https://www.pasonagroup.co.jp/english/",
+
+    # Consulting firms Japan
+    "McKinsey Japan careers": "https://www.mckinsey.com/jp/careers",
+    "Deloitte Japan careers": "https://www2.deloitte.com/jp/en/pages/careers/articles/careers-home.html",
+    "Accenture Japan careers": "https://www.accenture.com/jp-en/careers",
+
+    # Survey & social research
+    "Intage Research": "https://www.intage.co.jp/english/",
+    "Macromill": "https://www.macromill.com/en/",
+
+    # Policy & government-adjacent research
+    "NISTEP National Institute of Science and Technology Policy": "https://www.nistep.go.jp/en",
+    "National Institute of Population and Social Security Research": "https://www.ipss.go.jp/s-info/e/Employ/Employ.asp",
+
+    # NGO / nonprofit research
+    "Asia Pacific Initiative": "https://apinitiative.org/en/",
+    "Nippon Foundation": "https://www.nippon-foundation.or.jp/en/who/jobs",
+    "Sasakawa Peace Foundation": "https://www.spf.org/en/about/jobs.html",
+}
+
+
+# ── EXPANDED JOB BOARDS ────────────────────────────────────────────────────────
+
+POSTDOC_BOARDS_EXPANDED = {
+    "Devex (international development jobs)": "https://www.devex.com/jobs/search#",
+    "ReliefWeb (UN/NGO jobs)": "https://reliefweb.int/jobs",
+    "EuroBrussels (EU policy jobs)": "https://www.eurbrussels.com/jobs_list.html",
+    "Euractiv Jobs": "https://jobs.euractiv.com/",
+    "GaijinPot Jobs (English jobs in Japan)": "https://jobs.gaijinpot.com/",
+}
