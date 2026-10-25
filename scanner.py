@@ -10,10 +10,13 @@ from config import (
     KEYWORDS,
     EUROPE_ORGS,
     EUROPE_UNIVERSITIES,
+    EUROPE_ORGS_EXPANDED,
     JAPAN_ORGS,
     JAPAN_UNIVERSITIES,
+    JAPAN_ORGS_EXPANDED,
     JAPAN_ACADEMIC_BOARDS,
     POSTDOC_BOARDS,
+    POSTDOC_BOARDS_EXPANDED,
     NEWS_SOURCES,
 )
 
@@ -232,6 +235,9 @@ def run_scan():
         ("JAPAN — Universities", JAPAN_UNIVERSITIES, "japan_universities"),
         ("JAPAN — Academic Boards", JAPAN_ACADEMIC_BOARDS, "japan_academic_boards"),
         ("POSTDOC BOARDS", POSTDOC_BOARDS, "postdoc_boards"),
+        ("europe_orgs_expanded", EUROPE_ORGS_EXPANDED, "europe_orgs_expanded"),
+        ("japan_orgs_expanded", JAPAN_ORGS_EXPANDED, "japan_orgs_expanded"),
+        ("postdoc_boards_expanded", POSTDOC_BOARDS_EXPANDED, "postdoc_boards_expanded"),
     ]
 
     for label, org_dict, key in sections:
