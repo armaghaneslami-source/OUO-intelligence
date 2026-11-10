@@ -460,6 +460,23 @@ const ORG_MAP = {
   "Asia Pacific Initiative": { region: "japan", type: "industry" },
   "Mercari R4D": { region: "japan", type: "industry" },
   "JILPT": { region: "japan", type: "industry" },
+  // Japan industry expanded
+  "NLI Research Institute": { region: "japan", type: "industry" },
+  "Japan Productivity Center": { region: "japan", type: "industry" },
+  "World Bank Tokyo office": { region: "japan", type: "industry" },
+  "UNDP Japan": { region: "japan", type: "industry" },
+  "UNICEF Japan": { region: "japan", type: "industry" },
+  "Persol Research and Consulting": { region: "japan", type: "industry" },
+  "Pasona Group": { region: "japan", type: "industry" },
+  "McKinsey Japan careers": { region: "japan", type: "industry" },
+  "Deloitte Japan careers": { region: "japan", type: "industry" },
+  "Accenture Japan careers": { region: "japan", type: "industry" },
+  "Intage Research": { region: "japan", type: "industry" },
+  "Macromill": { region: "japan", type: "industry" },
+  "NISTEP National Institute of Science and Technology Policy": { region: "japan", type: "industry" },
+  "National Institute of Population and Social Security Research": { region: "japan", type: "industry" },
+  "Nippon Foundation": { region: "japan", type: "industry" },
+  "Sasakawa Peace Foundation": { region: "japan", type: "industry" },
   // Europe academia
   "KU Leuven": { region: "europe", type: "academia" },
   "Ghent University": { region: "europe", type: "academia" },
@@ -489,6 +506,12 @@ const ORG_MAP = {
   "EuroBrussels": { region: "europe", type: "academia" },
   "CORDIS (Horizon Europe projects)": { region: "europe", type: "academia" },
   "JREC-IN": { region: "japan", type: "academia" },
+  // Postdoc boards expanded
+  "Devex (international development jobs)": { region: "europe", type: "industry" },
+  "ReliefWeb (UN/NGO jobs)": { region: "europe", type: "industry" },
+  "EuroBrussels (EU policy jobs)": { region: "europe", type: "academia" },
+  "Euractiv Jobs": { region: "europe", type: "industry" },
+  "GaijinPot Jobs (English jobs in Japan)": { region: "japan", type: "industry" },
   // Europe industry / think tank
   "CEPS": { region: "europe", type: "industry" },
   "ETUI": { region: "europe", type: "industry" },
@@ -509,6 +532,41 @@ const ORG_MAP = {
   "EUROFOUND": { region: "europe", type: "industry" },
   "CEDEFOP": { region: "europe", type: "industry" },
   "EU-OSHA": { region: "europe", type: "industry" },
+  // Europe industry expanded
+  "IZA Institute of Labor Economics (Bonn)": { region: "europe", type: "industry" },
+  "CPB Netherlands Bureau for Economic Policy Analysis": { region: "europe", type: "industry" },
+  "DIW Berlin (German Institute for Economic Research)": { region: "europe", type: "industry" },
+  "IFAU Sweden (labour market policy evaluation)": { region: "europe", type: "industry" },
+  "IAB Germany (Institute for Employment Research)": { region: "europe", type: "industry" },
+  "WZB Berlin Social Science Center": { region: "europe", type: "industry" },
+  "ZEW Mannheim (Centre for European Economic Research)": { region: "europe", type: "industry" },
+  "LISER Luxembourg (work, health, labour market)": { region: "europe", type: "industry" },
+  "OECD careers": { region: "europe", type: "industry" },
+  "ILO Geneva careers": { region: "europe", type: "industry" },
+  "World Bank jobs": { region: "europe", type: "industry" },
+  "Eurofound": { region: "europe", type: "industry" },
+  "CBS Statistics Netherlands": { region: "europe", type: "industry" },
+  "ONS UK Office for National Statistics": { region: "europe", type: "industry" },
+  "Destatis Germany Federal Statistical Office": { region: "europe", type: "industry" },
+  "Statistik Austria": { region: "europe", type: "industry" },
+  "Ipsos careers": { region: "europe", type: "industry" },
+  "Kantar careers": { region: "europe", type: "industry" },
+  "GfK careers": { region: "europe", type: "industry" },
+  "Gallup careers": { region: "europe", type: "industry" },
+  "BCG Henderson Institute careers": { region: "europe", type: "industry" },
+  "Deloitte Human Capital research careers": { region: "europe", type: "industry" },
+  "Philips careers": { region: "europe", type: "industry" },
+  "Unilever careers": { region: "europe", type: "industry" },
+  "ING Group careers": { region: "europe", type: "industry" },
+  "Spotify jobs": { region: "europe", type: "industry" },
+  "Booking.com careers": { region: "europe", type: "industry" },
+  "3ie International Initiative for Impact Evaluation": { region: "europe", type: "industry" },
+  "J-PAL Europe": { region: "europe", type: "industry" },
+  "Mathematica careers": { region: "europe", type: "industry" },
+  "ICF International Europe": { region: "europe", type: "industry" },
+  "Mercer careers": { region: "europe", type: "industry" },
+  "Willis Towers Watson careers": { region: "europe", type: "industry" },
+  "Korn Ferry careers": { region: "europe", type: "industry" },
 };
 
 // ── SAMPLE DATA (replace with real results.json from GitHub) ──────────────────
@@ -587,6 +645,9 @@ const SAMPLE_DATA = {
     },
     { "name": "Academic Positions", "url": "https://academicpositions.com", "keywords_found": [], "status": "nothing relevant", "postings_found": [] },
   ],
+  "europe_orgs_expanded": [],
+  "japan_orgs_expanded": [],
+  "postdoc_boards_expanded": [],
   "news": [
     { "title": "EU AI Act reshapes how companies manage algorithmic decision-making at work", "link": "https://www.euractiv.com/", "published": "Sun, 11 Oct 2026 08:00:00 GMT", "query": "algorithmic management research" },
     { "title": "ETUI publishes new report on platform workers and digital surveillance", "link": "https://www.etui.org/", "published": "Sat, 10 Oct 2026 12:00:00 GMT", "query": "ETUI digital work" },
@@ -677,10 +738,13 @@ function renderMatrix(data) {
   const allOrgs = [
     ...(data.europe_jobs || []),
     ...(data.europe_universities || []),
+    ...(data.europe_orgs_expanded || []),
     ...(data.japan_jobs || []),
     ...(data.japan_universities || []),
     ...(data.japan_academic_boards || []),
+    ...(data.japan_orgs_expanded || []),
     ...(data.postdoc_boards || []),
+    ...(data.postdoc_boards_expanded || []),
   ];
 
   // Sort: relevant first within each quadrant
@@ -755,7 +819,15 @@ function renderNews(data) {
 function renderDate(data) {
   if (!data.scan_date) return;
   const d = new Date(data.scan_date);
-  const str = d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" });
+  const str = d.toLocaleString("en-GB", {
+    weekday: "short",
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZone: "Asia/Tokyo"
+  }) + " JST";
   document.getElementById("scan-date-header").textContent = `last scan: ${str}`;
   document.getElementById("scan-date-footer").textContent = `OUO Intelligence · scanned ${str}`;
 }
