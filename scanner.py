@@ -7,7 +7,6 @@ import json
 import re
 from datetime import datetime
 from config import (
-    KEYWORDS,
     EUROPE_ORGS,
     EUROPE_UNIVERSITIES,
     EUROPE_ORGS_EXPANDED,
@@ -19,16 +18,55 @@ from config import (
     POSTDOC_BOARDS_EXPANDED,
     NEWS_SOURCES,
 )
+from keywords import (
+    ACADEMIA_TITLES,
+    ACADEMIA_FIELDS,
+    INDUSTRY_STRONG,
+)
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
 }
 
-# ── KEYWORD CHECK ─────────────────────────────────────────────────────────────
 
-def check_keywords(text):
+# ── KEYWORD MATCHING ──────────────────────────────────────────────────────────
+#
+# Two modes:
+#
+# "academia" -- used for universities, postdoc boards, academic job boards.
+#   Requires BOTH:
+#     - at least one ACADEMIA_TITLES term (e.g. "postdoc", "research fellow")
+#     - at least one ACADEMIA_FIELDS term (e.g. "organizational psychology", "workplace")
+#   This prevents false positives from MBA programs or IT research jobs.
+#
+# "industry" -- used for think tanks, institutes, survey firms, consultancies.
+#   Requires at least one INDUSTRY_STRONG phrase (e.g. "people analytics",
+#   "workforce research", "labor policy").
+#   These phrases are specific enough that a single match is sufficient.
+
+def check_keywords_academia(text):
+    """
+    Returns matched keywords if the text looks like a relevant academic posting.
+    Requires at least one title term AND at least one field term.
+    """
     text_lower = text.lower()
-    return [kw for kw in KEYWORDS if kw.lower() in text_lower]
+
+    titles_found = [t for t in ACADEMIA_TITLES if t.lower() in text_lower]
+    fields_found = [f for f in ACADEMIA_FIELDS if f.lower() in text_lower]
+
+    if titles_found and fields_found:
+        # Return a combined list for display on the dashboard
+        return titles_found[:2] + fields_found[:3]
+    return []
+
+
+def check_keywords_industry(text):
+    """
+    Returns matched keywords if the text contains a strong industry phrase.
+    One match is sufficient.
+    """
+    text_lower = text.lower()
+    return [phrase for phrase in INDUSTRY_STRONG if phrase.lower() in text_lower]
 
 
 # ── POSTING EXTRACTION ────────────────────────────────────────────────────────
@@ -97,7 +135,6 @@ def extract_postings(soup, base_url, keywords_found):
                     link = f"{parsed.scheme}://{parsed.netloc}{href}"
 
             # Try to find a nearby deadline
-            deadline = None
             sibling_text = ""
             for sib in heading.next_siblings:
                 sib_str = sib.get_text(strip=True) if hasattr(sib, 'get_text') else str(sib)
@@ -115,7 +152,7 @@ def extract_postings(soup, base_url, keywords_found):
         if postings:
             break  # found something with h2/h3, stop here
 
-    # Strategy 2: look for <li> or <a> items that look like job titles
+    # Strategy 2: look for <a> items that look like job titles
     if not postings:
         for a in soup.find_all('a', href=True):
             title = a.get_text(strip=True)
@@ -133,7 +170,6 @@ def extract_postings(soup, base_url, keywords_found):
             else:
                 continue
 
-            # Avoid nav links / footer links by skipping very short paths
             postings.append({
                 "title": title,
                 "url": link,
@@ -155,16 +191,24 @@ def extract_postings(soup, base_url, keywords_found):
     return deduped
 
 
-# ── PAGE SCANNER ─────────────────────────────────────────────────────────────
+# ── PAGE SCANNER ──────────────────────────────────────────────────────────────
 
-def scan_page(name, url):
+def scan_page(name, url, mode="academia"):
+    """
+    Scan one page and return a result dict.
+    mode: "academia" or "industry" -- controls which keyword logic is used.
+    """
     print(f"  Scanning {name}...")
     try:
         response = requests.get(url, headers=HEADERS, timeout=12)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         text = soup.get_text(separator=' ', strip=True)
-        keywords_found = check_keywords(text)
+
+        if mode == "industry":
+            keywords_found = check_keywords_industry(text)
+        else:
+            keywords_found = check_keywords_academia(text)
 
         result = {
             "name": name,
@@ -231,22 +275,23 @@ def run_scan():
         "postdoc_boards_expanded": [],
     }
 
+    # Each section: (display label, org dict, results key, keyword mode)
     sections = [
-        ("EUROPE — Think Tanks & Institutes", EUROPE_ORGS, "europe_jobs"),
-        ("EUROPE — Universities", EUROPE_UNIVERSITIES, "europe_universities"),
-        ("JAPAN — Orgs & Think Tanks", JAPAN_ORGS, "japan_jobs"),
-        ("JAPAN — Universities", JAPAN_UNIVERSITIES, "japan_universities"),
-        ("JAPAN — Academic Boards", JAPAN_ACADEMIC_BOARDS, "japan_academic_boards"),
-        ("POSTDOC BOARDS", POSTDOC_BOARDS, "postdoc_boards"),
-        ("europe_orgs_expanded", EUROPE_ORGS_EXPANDED, "europe_orgs_expanded"),
-        ("japan_orgs_expanded", JAPAN_ORGS_EXPANDED, "japan_orgs_expanded"),
-        ("postdoc_boards_expanded", POSTDOC_BOARDS_EXPANDED, "postdoc_boards_expanded"),
+        ("EUROPE — Think Tanks & Institutes", EUROPE_ORGS,          "europe_jobs",           "industry"),
+        ("EUROPE — Universities",             EUROPE_UNIVERSITIES,   "europe_universities",   "academia"),
+        ("EUROPE — Expanded Orgs",            EUROPE_ORGS_EXPANDED,  "europe_orgs_expanded",  "industry"),
+        ("JAPAN — Orgs & Think Tanks",        JAPAN_ORGS,            "japan_jobs",            "industry"),
+        ("JAPAN — Universities",              JAPAN_UNIVERSITIES,    "japan_universities",    "academia"),
+        ("JAPAN — Academic Boards",           JAPAN_ACADEMIC_BOARDS, "japan_academic_boards", "academia"),
+        ("JAPAN — Expanded Orgs",             JAPAN_ORGS_EXPANDED,   "japan_orgs_expanded",   "industry"),
+        ("POSTDOC BOARDS",                    POSTDOC_BOARDS,        "postdoc_boards",        "academia"),
+        ("POSTDOC BOARDS EXPANDED",           POSTDOC_BOARDS_EXPANDED, "postdoc_boards_expanded", "academia"),
     ]
 
-    for label, org_dict, key in sections:
+    for label, org_dict, key, mode in sections:
         print(f"\n--- {label} ---")
         for name, url in org_dict.items():
-            result = scan_page(name, url)
+            result = scan_page(name, url, mode=mode)
             results[key].append(result)
 
     print("\n--- NEWS ---")
@@ -256,7 +301,7 @@ def run_scan():
         if news:
             print(f"  {query}: {len(news)} items")
 
-    # Save results — UTF-8 encoding explicitly set
+    # Save results
     with open("results.json", "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 
@@ -265,13 +310,20 @@ def run_scan():
     # Summary
     total_relevant = 0
     total_postings = 0
-    for key in ["europe_jobs", "europe_universities", "japan_jobs", "japan_universities", "japan_academic_boards", "postdoc_boards"]:
+    all_keys = ["europe_jobs", "europe_universities", "europe_orgs_expanded",
+                "japan_jobs", "japan_universities", "japan_academic_boards",
+                "japan_orgs_expanded", "postdoc_boards", "postdoc_boards_expanded"]
+
+    for key in all_keys:
         for r in results[key]:
             if r["status"] == "RELEVANT":
                 total_relevant += 1
                 n = len(r.get("postings_found", []))
                 total_postings += n
-                posting_str = f" ({n} posting{'s' if n != 1 else ''} extracted)" if n else " (keywords matched, no structured postings found)"
+                posting_str = (
+                    f" ({n} posting{'s' if n != 1 else ''} extracted)"
+                    if n else " (keywords matched, no structured postings found)"
+                )
                 print(f"  RELEVANT: {r['name']}{posting_str}")
                 for p in r.get("postings_found", []):
                     deadline_str = f" — deadline: {p['deadline']}" if p.get('deadline') else ""
