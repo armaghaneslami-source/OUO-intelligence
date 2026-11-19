@@ -1,5 +1,5 @@
 {
-  "scan_date": "2026-11-18T04:01:39.221944",
+  "scan_date": "2026-11-19T03:58:14.793461",
   "europe_jobs": [
     {
       "name": "CEPS",
@@ -7,7 +7,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.ceps.eu/who-we-are/join-ceps/",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:01:40.805477"
+      "scanned_at": "2026-11-19T03:58:16.522960"
     },
     {
       "name": "ETUI",
@@ -15,7 +15,7 @@
       "keywords_found": [],
       "status": "error: 403 Client Error: Forbidden for url: https://www.etui.org/about-etui/jobs-at-etui",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:01:41.011482"
+      "scanned_at": "2026-11-19T03:58:16.644749"
     },
     {
       "name": "Bruegel",
@@ -23,7 +23,7 @@
       "keywords_found": [],
       "status": "error: 403 Client Error: Forbidden for url: https://www.bruegel.org/careers",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:01:41.285546"
+      "scanned_at": "2026-11-19T03:58:16.755607"
     },
     {
       "name": "TNO",
@@ -31,7 +31,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:01:41.520898"
+      "scanned_at": "2026-11-19T03:58:17.514448"
     },
     {
       "name": "Rathenau",
@@ -39,7 +39,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:01:41.997937"
+      "scanned_at": "2026-11-19T03:58:18.253711"
     },
     {
       "name": "AIAS-HSI (UvA)",
@@ -47,7 +47,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:01:45.298633"
+      "scanned_at": "2026-11-19T03:58:19.789660"
     },
     {
       "name": "IHS Vienna",
@@ -55,7 +55,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.ihs.ac.at/en/about/vacancies/",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:01:46.007407"
+      "scanned_at": "2026-11-19T03:58:21.266603"
     },
     {
       "name": "WIFO",
@@ -63,7 +63,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.wifo.ac.at/en/about_wifo/career_opportunities",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:01:47.445404"
+      "scanned_at": "2026-11-19T03:58:22.934462"
     },
     {
       "name": "Bertelsmann Stiftung",
@@ -79,7 +79,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:01:49.083356"
+      "scanned_at": "2026-11-19T03:58:24.769011"
     },
     {
       "name": "NESTA",
@@ -105,7 +105,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:01:49.343747"
+      "scanned_at": "2026-11-19T03:58:25.462574"
     },
     {
       "name": "AlgorithmWatch",
@@ -113,7 +113,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:01:50.611918"
+      "scanned_at": "2026-11-19T03:58:26.659238"
     },
     {
       "name": "Fraunhofer IAO",
@@ -129,7 +129,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:01:51.074914"
+      "scanned_at": "2026-11-19T03:58:27.433869"
     },
     {
       "name": "Fraunhofer ISI",
@@ -137,7 +137,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:01:52.013104"
+      "scanned_at": "2026-11-19T03:58:28.217247"
     },
     {
       "name": "SINTEF",
@@ -145,7 +145,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.sintef.no/en/about-sintef/career/",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:01:52.352522"
+      "scanned_at": "2026-11-19T03:58:28.705911"
     },
     {
       "name": "VTT",
@@ -166,7 +166,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:01:52.931633"
+      "scanned_at": "2026-11-19T03:58:30.014169"
     },
     {
       "name": "JRC (European Commission)",
@@ -174,7 +174,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:01:53.257217"
+      "scanned_at": "2026-11-19T03:58:30.536647"
     },
     {
       "name": "EUROFOUND",
@@ -182,7 +182,7 @@
       "keywords_found": [],
       "status": "error: 429 Client Error: Too Many Requests for url: https://www.eurofound.europa.eu/en/pages/vacancies",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:01:53.464666"
+      "scanned_at": "2026-11-19T03:58:30.766065"
     },
     {
       "name": "CEDEFOP",
@@ -190,7 +190,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:01:54.309050"
+      "scanned_at": "2026-11-19T03:58:33.577203"
     },
     {
       "name": "EU-OSHA",
@@ -198,7 +198,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:01:55.393289"
+      "scanned_at": "2026-11-19T03:58:34.627214"
     }
   ],
   "europe_universities": [
@@ -217,7 +217,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:01:56.196525"
+      "scanned_at": "2026-11-19T03:58:35.874345"
     },
     {
       "name": "Ghent University",
@@ -241,7 +241,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:01:57.358049"
+      "scanned_at": "2026-11-19T03:58:36.932015"
     },
     {
       "name": "Vrije Universiteit Brussel",
@@ -261,7 +261,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:01:58.583781"
+      "scanned_at": "2026-11-19T03:58:38.837878"
     },
     {
       "name": "Radboud University",
@@ -281,7 +281,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:02:00.299486"
+      "scanned_at": "2026-11-19T03:58:40.543718"
     },
     {
       "name": "University of Amsterdam",
@@ -298,7 +298,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:02:01.874365"
+      "scanned_at": "2026-11-19T03:58:40.925010"
     },
     {
       "name": "Tilburg University",
@@ -306,7 +306,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:02.419672"
+      "scanned_at": "2026-11-19T03:58:41.789683"
     },
     {
       "name": "Erasmus University Rotterdam",
@@ -314,7 +314,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:03.147544"
+      "scanned_at": "2026-11-19T03:58:42.659160"
     },
     {
       "name": "Delft University of Technology",
@@ -334,17 +334,17 @@
           "deadline": null
         },
         {
-          "title": "PhD Position Understanding Incentives for Software Reuse",
-          "url": "https://careers.tudelft.nl/job/Delft-PhD-Position-Understanding-Incentives-for-Software-Reuse-2628-CD/1377715857/",
+          "title": "Postdoc Researcher Design Theory for Linking Data Platforms in Healthcare and Agri-Food",
+          "url": "https://careers.tudelft.nl/job/Delft-Postdoc-Researcher-Design-Theory-for-Linking-Data-Platforms-in-Healthcare-and-Agri-Food-2628-CD/1377820757/",
           "deadline": null
         },
         {
-          "title": "PhD position Data-Driven Distribution Systems Planning with District Heating",
-          "url": "https://careers.tudelft.nl/job/Delft-PhD-position-Data-Driven-Distribution-Systems-Planning-with-District-Heating-2628-CD/1377696157/",
+          "title": "PhD Position Biomolecular Ultrasound Imaging",
+          "url": "https://careers.tudelft.nl/job/Delft-PhD-Position-Biomolecular-Ultrasound-Imaging-2628-CD/1377819157/",
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:02:03.991213"
+      "scanned_at": "2026-11-19T03:58:43.688178"
     },
     {
       "name": "TU Munich",
@@ -364,7 +364,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:02:05.218167"
+      "scanned_at": "2026-11-19T03:58:44.907161"
     },
     {
       "name": "LMU Munich",
@@ -372,7 +372,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:06.080301"
+      "scanned_at": "2026-11-19T03:58:46.044589"
     },
     {
       "name": "University of Cologne",
@@ -380,7 +380,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:07.655905"
+      "scanned_at": "2026-11-19T03:58:47.863288"
     },
     {
       "name": "Humboldt University Berlin",
@@ -388,7 +388,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:08.358616"
+      "scanned_at": "2026-11-19T03:58:49.455559"
     },
     {
       "name": "University of Vienna",
@@ -418,7 +418,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:02:09.335164"
+      "scanned_at": "2026-11-19T03:58:50.502651"
     },
     {
       "name": "WU Vienna",
@@ -426,7 +426,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.wu.ac.at/en/hr/open-positions/",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:10.696107"
+      "scanned_at": "2026-11-19T03:58:52.212732"
     },
     {
       "name": "University of Graz",
@@ -434,7 +434,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:11.633999"
+      "scanned_at": "2026-11-19T03:58:52.899612"
     },
     {
       "name": "TU Graz",
@@ -442,7 +442,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:12.157185"
+      "scanned_at": "2026-11-19T03:58:53.418200"
     }
   ],
   "japan_jobs": [
@@ -465,7 +465,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:02:48.212399"
+      "scanned_at": "2026-11-19T03:59:34.819874"
     },
     {
       "name": "UN University",
@@ -473,7 +473,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://careers.unu.edu/o/researcher",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:48.911133"
+      "scanned_at": "2026-11-19T03:59:35.714004"
     },
     {
       "name": "OECD Tokyo",
@@ -481,7 +481,7 @@
       "keywords_found": [],
       "status": "error: 403 Client Error: Forbidden for url: https://www.oecd.org/careers/",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:48.933285"
+      "scanned_at": "2026-11-19T03:59:35.762468"
     },
     {
       "name": "GRIPS",
@@ -489,7 +489,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.grips.ac.jp/en/about/jobs/",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:49.826619"
+      "scanned_at": "2026-11-19T03:59:36.382408"
     },
     {
       "name": "RIETI",
@@ -497,7 +497,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.rieti.go.jp/en/about/recruitment.html",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:51.682513"
+      "scanned_at": "2026-11-19T03:59:37.849346"
     },
     {
       "name": "Recruit Works Institute",
@@ -505,7 +505,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:52.377013"
+      "scanned_at": "2026-11-19T03:59:38.518749"
     },
     {
       "name": "UTokyo PARI",
@@ -513,7 +513,7 @@
       "keywords_found": [],
       "status": "error: HTTPSConnectionPool(host='pari.u-tokyo.ac.jp', port=443): Max retries exceeded with url: /eng/ (Caused by NameResolutionError(\"HTTPSConnection(host='pari.u-tokyo.ac.jp', port=443): Failed to resolve 'pari.u-tokyo.ac.jp' ([Errno -2] Name or service not known)\"))",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:52.725634"
+      "scanned_at": "2026-11-19T03:59:38.663436"
     },
     {
       "name": "Asia Pacific Initiative",
@@ -521,7 +521,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:55.321976"
+      "scanned_at": "2026-11-19T03:59:40.841119"
     },
     {
       "name": "Mercari R4D",
@@ -529,7 +529,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:55.387710"
+      "scanned_at": "2026-11-19T03:59:41.031012"
     },
     {
       "name": "JILPT",
@@ -537,7 +537,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.jil.go.jp/english/about/recruit.html",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:56.566455"
+      "scanned_at": "2026-11-19T03:59:42.136351"
     }
   ],
   "japan_universities": [
@@ -547,7 +547,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:01.252445"
+      "scanned_at": "2026-11-19T03:59:44.535303"
     },
     {
       "name": "UTokyo Tokyo College (interdisciplinary, English)",
@@ -555,7 +555,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:03.197935"
+      "scanned_at": "2026-11-19T03:59:46.340560"
     },
     {
       "name": "UTokyo Institute for Future Initiatives",
@@ -592,7 +592,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:03:04.891281"
+      "scanned_at": "2026-11-19T03:59:47.971635"
     },
     {
       "name": "Hitotsubashi University jobs",
@@ -600,7 +600,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:05.835290"
+      "scanned_at": "2026-11-19T03:59:48.810468"
     },
     {
       "name": "Waseda University jobs",
@@ -608,7 +608,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.waseda.jp/top/en/about/work/job-openings",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:07.622509"
+      "scanned_at": "2026-11-19T03:59:50.437036"
     },
     {
       "name": "Waseda Institute for Advanced Study (WIAS)",
@@ -616,7 +616,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.waseda.jp/inst/wias/en/recruitment/",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:08.382148"
+      "scanned_at": "2026-11-19T03:59:54.940810"
     },
     {
       "name": "Keio University jobs",
@@ -635,7 +635,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:03:08.669216"
+      "scanned_at": "2026-11-19T03:59:55.303606"
     },
     {
       "name": "Sophia University jobs",
@@ -643,7 +643,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:09.792457"
+      "scanned_at": "2026-11-19T03:59:56.093815"
     },
     {
       "name": "ICU jobs",
@@ -668,7 +668,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:03:10.687934"
+      "scanned_at": "2026-11-19T03:59:57.024575"
     },
     {
       "name": "Meiji University jobs",
@@ -676,7 +676,7 @@
       "keywords_found": [],
       "status": "error: 403 Client Error: Forbidden for url: https://www.meiji.ac.jp/seikei/koubo/",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:11.344360"
+      "scanned_at": "2026-11-19T03:59:57.709764"
     },
     {
       "name": "Ritsumeikan APU jobs",
@@ -684,7 +684,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: 404 for url: https://en.apu.ac.jp/home/faculty/content1399/",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:12.985270"
+      "scanned_at": "2026-11-19T03:59:59.024145"
     },
     {
       "name": "Rikkyo University jobs",
@@ -729,7 +729,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:03:13.882346"
+      "scanned_at": "2026-11-19T03:59:59.742437"
     },
     {
       "name": "Temple University Japan jobs",
@@ -737,7 +737,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:14.136351"
+      "scanned_at": "2026-11-19T04:00:00.083665"
     },
     {
       "name": "Tokyo Tech / Institute of Science Tokyo jobs",
@@ -745,7 +745,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:16.341553"
+      "scanned_at": "2026-11-19T04:00:01.922745"
     },
     {
       "name": "Chuo University jobs",
@@ -753,7 +753,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:17.941055"
+      "scanned_at": "2026-11-19T04:00:03.185960"
     }
   ],
   "japan_academic_boards": [
@@ -763,8 +763,7 @@
       "keywords_found": [
         "postdoctoral",
         "postdoc",
-        "management",
-        "longitudinal"
+        "management"
       ],
       "status": "RELEVANT",
       "postings_found": [
@@ -799,12 +798,12 @@
           "deadline": null
         },
         {
-          "title": "Kanto district(244 job postings)",
+          "title": "Kanto district(246 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=00003",
           "deadline": null
         },
         {
-          "title": "Hokuriku and Koshinetsu district(62 job postings)",
+          "title": "Hokuriku and Koshinetsu district(63 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=00004",
           "deadline": null
         },
@@ -814,12 +813,12 @@
           "deadline": null
         },
         {
-          "title": "Kinki district(95 job postings)",
+          "title": "Kinki district(94 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=00006",
           "deadline": null
         },
         {
-          "title": "Chugoku district(34 job postings)",
+          "title": "Chugoku district(36 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=00007",
           "deadline": null
         },
@@ -829,17 +828,17 @@
           "deadline": null
         },
         {
-          "title": "Kyushu and Okinawa district(44 job postings)",
+          "title": "Kyushu and Okinawa district(42 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=00009",
           "deadline": null
         },
         {
-          "title": "Others(222 job postings)",
+          "title": "Others(220 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=99999",
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:03:19.361582"
+      "scanned_at": "2026-11-19T04:00:05.900122"
     },
     {
       "name": "JREC-IN Social Science filter",
@@ -847,8 +846,7 @@
       "keywords_found": [
         "postdoctoral",
         "postdoc",
-        "management",
-        "longitudinal"
+        "management"
       ],
       "status": "RELEVANT",
       "postings_found": [
@@ -883,12 +881,12 @@
           "deadline": null
         },
         {
-          "title": "Kanto district(244 job postings)",
+          "title": "Kanto district(246 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=00003",
           "deadline": null
         },
         {
-          "title": "Hokuriku and Koshinetsu district(62 job postings)",
+          "title": "Hokuriku and Koshinetsu district(63 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=00004",
           "deadline": null
         },
@@ -898,12 +896,12 @@
           "deadline": null
         },
         {
-          "title": "Kinki district(95 job postings)",
+          "title": "Kinki district(94 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=00006",
           "deadline": null
         },
         {
-          "title": "Chugoku district(34 job postings)",
+          "title": "Chugoku district(36 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=00007",
           "deadline": null
         },
@@ -913,17 +911,17 @@
           "deadline": null
         },
         {
-          "title": "Kyushu and Okinawa district(44 job postings)",
+          "title": "Kyushu and Okinawa district(42 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=00009",
           "deadline": null
         },
         {
-          "title": "Others(222 job postings)",
+          "title": "Others(220 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=99999",
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:03:20.977201"
+      "scanned_at": "2026-11-19T04:00:07.348818"
     },
     {
       "name": "Daigaku Jobs (Japanese board)",
@@ -931,7 +929,7 @@
       "keywords_found": [],
       "status": "error: HTTPSConnectionPool(host='jobs.daigaku.net', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='jobs.daigaku.net', port=443): Failed to resolve 'jobs.daigaku.net' ([Errno -2] Name or service not known)\"))",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:20.997681"
+      "scanned_at": "2026-11-19T04:00:07.454486"
     },
     {
       "name": "Times Higher Education Japan",
@@ -939,7 +937,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:21.377194"
+      "scanned_at": "2026-11-19T04:00:07.875487"
     }
   ],
   "postdoc_boards": [
@@ -948,7 +946,7 @@
       "url": "https://euraxess.ec.europa.eu/jobs/search",
       "keywords_found": [
         "postdoc",
-        "post-doc",
+        "research fellow",
         "psychology",
         "psychological",
         "behavioural science"
@@ -961,7 +959,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:03:45.375419"
+      "scanned_at": "2026-11-19T04:00:33.723180"
     },
     {
       "name": "Academic Positions",
@@ -969,7 +967,7 @@
       "keywords_found": [],
       "status": "error: 403 Client Error: Forbidden for url: https://academicpositions.com/",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:45.494776"
+      "scanned_at": "2026-11-19T04:00:33.841480"
     },
     {
       "name": "Nature Careers",
@@ -987,7 +985,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:03:45.816068"
+      "scanned_at": "2026-11-19T04:00:34.397043"
     },
     {
       "name": "ResearchGate Jobs",
@@ -995,7 +993,7 @@
       "keywords_found": [],
       "status": "error: 403 Client Error: Forbidden for url: https://www.researchgate.net/jobs",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:45.849580"
+      "scanned_at": "2026-11-19T04:00:34.481984"
     },
     {
       "name": "Times Higher Education",
@@ -1010,7 +1008,7 @@
       "status": "RELEVANT",
       "postings_found": [
         {
-          "title": "Higher education’s global job boardSearch 1,181 academic & university jobs",
+          "title": "Higher education’s global job boardSearch 1,191 academic & university jobs",
           "url": "https://www.timeshighereducation.com/unijobs/",
           "deadline": null
         },
@@ -1020,7 +1018,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:03:46.281595"
+      "scanned_at": "2026-11-19T04:00:34.836298"
     },
     {
       "name": "Academic Transfer (NL)",
@@ -1028,7 +1026,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:47.117692"
+      "scanned_at": "2026-11-19T04:00:35.976995"
     },
     {
       "name": "Find a Postdoc",
@@ -1051,7 +1049,7 @@
           "deadline": "26 November 2026"
         }
       ],
-      "scanned_at": "2026-11-18T04:03:47.599479"
+      "scanned_at": "2026-11-19T04:00:36.888027"
     },
     {
       "name": "Jobs.ac.uk",
@@ -1059,7 +1057,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:47.773461"
+      "scanned_at": "2026-11-19T04:00:38.028104"
     },
     {
       "name": "EuroBrussels",
@@ -1067,7 +1065,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:48.663005"
+      "scanned_at": "2026-11-19T04:00:38.983458"
     },
     {
       "name": "CORDIS (Horizon Europe projects)",
@@ -1075,7 +1073,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:49.154854"
+      "scanned_at": "2026-11-19T04:00:39.607160"
     },
     {
       "name": "JREC-IN",
@@ -1083,8 +1081,7 @@
       "keywords_found": [
         "postdoctoral",
         "postdoc",
-        "management",
-        "longitudinal"
+        "management"
       ],
       "status": "RELEVANT",
       "postings_found": [
@@ -1119,12 +1116,12 @@
           "deadline": null
         },
         {
-          "title": "Kanto district(244 job postings)",
+          "title": "Kanto district(246 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=00003",
           "deadline": null
         },
         {
-          "title": "Hokuriku and Koshinetsu district(62 job postings)",
+          "title": "Hokuriku and Koshinetsu district(63 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=00004",
           "deadline": null
         },
@@ -1134,12 +1131,12 @@
           "deadline": null
         },
         {
-          "title": "Kinki district(95 job postings)",
+          "title": "Kinki district(94 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=00006",
           "deadline": null
         },
         {
-          "title": "Chugoku district(34 job postings)",
+          "title": "Chugoku district(36 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=00007",
           "deadline": null
         },
@@ -1149,23 +1146,23 @@
           "deadline": null
         },
         {
-          "title": "Kyushu and Okinawa district(44 job postings)",
+          "title": "Kyushu and Okinawa district(42 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=00009",
           "deadline": null
         },
         {
-          "title": "Others(222 job postings)",
+          "title": "Others(220 job postings)",
           "url": "https://jrecin.jst.go.jp/seek/SeekJorSearch?fn=0&&area=99999",
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:03:50.283685"
+      "scanned_at": "2026-11-19T04:00:40.847773"
     }
   ],
   "news": [
     {
       "title": "An ELSI for AI: Learning from genetics to govern algorithms - Science | AAAS",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE4yeE5RNUF3c0U0WmJvMlN1XzJ5T05TbEk0OU9XajVQTmZpVDRoQmtIZ2lNNzJJOXNHVmFIUXlDZUdLWHJWLXpiNEJyY1JZanoxVW1SckhoMVZwV0diTWx6QlJpSGxnUQ?oc=5",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9hVVdrN2hNaFpQVG1hMFhQdWJEX1l1cENzNUV0M056VHQ1Ny1lN0xkNjB6RG5yeEJzZmNvYWxNcHpfYnVraGQ4bmFQRlM5VHFqSzRGRkpBVzIyMGZzVXBLQQ?oc=5",
       "published": "Thu, 11 Sep 2025 07:00:00 GMT",
       "query": "ELSI artificial intelligence"
     },
@@ -1200,15 +1197,15 @@
       "query": "future of work AI Europe"
     },
     {
-      "title": "Global leadership, local action: What Japan’s path to responsible AI can teach us - World Economic Forum",
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNRl9BUEhWa0JBMTQzZ1BmamZvUHZzMUJzQ2Fvcm91V2E1ZUN3U08xVTUtMnRFZ0VrbGVibVJfRGZKczA5ejFmRGN0eE9ZUnM1QkxueGwtd2hqMVd3cjVzSHJXN2FhQWQ1Zm9qeE9BM1JxMUxSalNDanFuTERFRkVTbjZYS1RuUmk2VUFMMi0yMEpmRlNDS2FQeFNvM2lwcXlxZ3p3Nkt2N0J2OWRxZWc?oc=5",
-      "published": "Mon, 19 Jan 2026 08:00:00 GMT",
+      "title": "Government AI “GENAI”｜Digital Agency - デジタル庁",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBsY09QdW8zWlJXRUgwUko3X2xJQ1g2MENHUGx2MzhYLXVRV2xhT3FiY01BYk0wdHoycy1DY1Qwc3YwQVBCT0ZiRkpreGdwdkljQUZiaW1n?oc=5",
+      "published": "Fri, 30 Oct 2026 07:00:00 GMT",
       "query": "AI governance Japan"
     },
     {
-      "title": "AI Watch: Global regulatory tracker - Japan - White & Case LLP",
-      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNaUQwSGpiS004cmZjZzJSMFBQY2NKT0pIOEVja0Q5TWtoVlA0STk3ejFzdmpzY0oxQWZWSi01RUhTanZVc3RQWmI5WXowSGF4X2JpWnViU242dy0tNTlvRFlZelB4VjBNQWlIWWpTVzJnQjc0WFB2YmsyX3ZtSzE5MWJBSVB5X1BsRG12UEszbDY?oc=5",
-      "published": "Mon, 13 Apr 2026 07:00:00 GMT",
+      "title": "From the G7 Hiroshima AI Process to Verifiable AI Governance: A Japan-Led Vision for International Standards - The National Law Review",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRVNyTDZsdlg4THgyOTVoS2RhZ0xDT0pDX1Q4OEhfSFZVbDgtSnA1VE9DbDVYN3VIVTg3cVJCelRKMXFCNlIxXzk4eC14NmhjZGZZVDQtMzd5OTNDbDVEU2pNcFNMa283Y0duZlhuQWlWVG1JT3RMRmtnYmpYanMwNWh0VnpEdFpnemhPS0ZMenFhSDZkWk1VdUZZWnpBcUlzajQwVERWOTQ?oc=5",
+      "published": "Wed, 28 Oct 2026 15:54:09 GMT",
       "query": "AI governance Japan"
     },
     {
@@ -1266,9 +1263,9 @@
       "query": "ETUI digital work"
     },
     {
-      "title": "Putting People at the Heart of the AI Revolution in Finance - Social Europe",
-      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPbGVzOGZKb2djSTY1Wi04OE5LZUk3ejBlM3NYMkt6SjBOUGI4S09kZFpNczJNaEo2Um9Ia3lmNlhwOGhaZVRjb19rLVJfem1CMHZLUW1xNExYajNfWmxPeFE4QmlVYkUzQTZVRkV3Mk9aTmVoTkV5dnk2aDZSTjdYZjlMcHVoaXlLMFhYSHVhYzE?oc=5",
-      "published": "Tue, 27 Jan 2026 08:00:00 GMT",
+      "title": "The Digital Omnibus: Deregulation Dressed as Innovation - Social Europe",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQOHdfS3kzOEsyWHlWVlhjREZkY1ZsWlM3eHJLREF6VmR0clFwVTV2RmpZSnV5WnoxbVNDT0xVMGgxME5fZkNzOG5IUGtRbHM3aEF0bGlTMUNvQ0xOVEVzRmd0MGc2RVB5eHRBbk80UUc1cWZIZ2lEWjNURjNsYnplRjVQd0w2Zm1hUnc?oc=5",
+      "published": "Wed, 03 Dec 2025 08:00:00 GMT",
       "query": "ETUI digital work"
     },
     {
@@ -1278,15 +1275,15 @@
       "query": "Mercari R4D ELSI"
     },
     {
-      "title": "One Year Since Deciding to Become AI-Led: Where Mercari Stands Today in Its AI-Native Journey - Mercari",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB5eE1sWFk3WEZ0ZnBrQmtkeHJRZ2h5b1ZVazUxM0JINERVdkdveXRDckxXS1lrR0JEQ3AxMDBBNGVXbnV0TVJXTWlReFNaUTVDa3BBNGRqVXVfaWlZMk9FYmZOYw?oc=5",
-      "published": "Tue, 13 Jan 2026 08:00:00 GMT",
+      "title": "Using Science and Technology to Pioneer a New Society: Mercari R4D Encourages Co-Innovation as a Hub for Research and Development - Mercari",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9GaGlZLUw0eGpJNTBiSGhtcFBRMTVjb1dNcGpCTnNGa3lKYVNvbGZ2V2hUTnpiTk42UzBBR2draGI3NTJIRDNDMjVHZEZ5aFVWaVZHNGJzVXFrLTh0ZmJ1azhLUQ?oc=5",
+      "published": "Thu, 22 Jun 2023 07:00:00 GMT",
       "query": "Mercari R4D ELSI"
     },
     {
-      "title": "Pioneering the Path Toward Undiscovered Value: Yoshihiro Kawahara and Masaya Mori on R4D’s Impact on R&D in Japan - Mercari",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE4wUFE0RTh5dllZUlNFdW1ZTXFnNVh1Yng5QkJyRWVmeWxXeUZlMEFvSWpNNHd5WEJOX2gyN2pnQ1RTWHJObEVxQ19qU25CdjBFZ05MSTlQV183b0NDaEFXeGdocw?oc=5",
-      "published": "Fri, 30 Jun 2023 07:00:00 GMT",
+      "title": "One Year Since Deciding to Become AI-Led: Where Mercari Stands Today in Its AI-Native Journey - Mercari",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB5eE1sWFk3WEZ0ZnBrQmtkeHJRZ2h5b1ZVazUxM0JINERVdkdveXRDckxXS1lrR0JEQ3AxMDBBNGVXbnV0TVJXTWlReFNaUTVDa3BBNGRqVXVfaWlZMk9FYmZOYw?oc=5",
+      "published": "Tue, 13 Jan 2026 08:00:00 GMT",
       "query": "Mercari R4D ELSI"
     },
     {
@@ -1326,21 +1323,21 @@
       "query": "Bertelsmann Stiftung digitalization"
     },
     {
-      "title": "“The future of work will not be determined by technology alone,” says ILO Director-General - International Labour Organization",
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQc2t1a2lrUHFZR3M3azZTekJQSEhkQ0lEMkdXb3BOUmYzVDBPRWEwX0lvaVNKUlotRmctcy15aUdmbi1qaGpuZnJnS1JhMFJKdHhLQkw4cDhsMDJSUDQ4LUh2OHo1M2JQdS01OWhwVG01ak5WeTJxbFpRMnE1ekNOWEhVOEdkX3A1N21pN0dHXy02Y1NIZXBCZmVralFmdVZVUG0zRFl3bFZTYTc2YUJkSTZzeHh4LUhsUkF3dDgzVmZoT2xCWlJhQW5rNG9wZw?oc=5",
-      "published": "Tue, 02 Jun 2026 07:00:00 GMT",
-      "query": "ILO future of work AI"
-    },
-    {
       "title": "Old Skills for new technologies? - International Labour Organization",
       "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBab1o4bjVkMnk0bDJlak8tS0sybnhaT3lEZjZaV0pGSHpKRVlCcWZQajU3My1fRjB2Q19Ub2RmNXJWNElKa2g5RXZHWnZTTVcyTzJjMTAwZFJlWl9UVlU1SjdsbERkZlp3TFd2LUJCaTBEUQ?oc=5",
       "published": "Tue, 14 Jul 2026 07:00:00 GMT",
       "query": "ILO future of work AI"
     },
     {
-      "title": "Artificial intelligence and the future of work: Will AI replace our jobs? - Unric",
-      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxONk5HT2NKVzBfTWdkRVotSjZmVVZoMUhQTmtiYVh2UVh2cVhjdTV2YUhHTHdmaC1lQ1ZwMWhqRGYwVHItaTZ3U2tCMjhVM090LUJmWENKZGJDUi1rNVMyXzhpd3lYMGhtVTNLcE5QSHFtZ3ByTHlHQUtJSUJLZWJ2MEs5MktWNXRxdVJCVlBxMUpGWTdEcXZoRg?oc=5",
-      "published": "Wed, 30 Apr 2025 07:00:00 GMT",
+      "title": "“The future of work will not be determined by technology alone,” says ILO Director-General - International Labour Organization",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQc2t1a2lrUHFZR3M3azZTekJQSEhkQ0lEMkdXb3BOUmYzVDBPRWEwX0lvaVNKUlotRmctcy15aUdmbi1qaGpuZnJnS1JhMFJKdHhLQkw4cDhsMDJSUDQ4LUh2OHo1M2JQdS01OWhwVG01ak5WeTJxbFpRMnE1ekNOWEhVOEdkX3A1N21pN0dHXy02Y1NIZXBCZmVralFmdVZVUG0zRFl3bFZTYTc2YUJkSTZzeHh4LUhsUkF3dDgzVmZoT2xCWlJhQW5rNG9wZw?oc=5",
+      "published": "Tue, 02 Jun 2026 07:00:00 GMT",
+      "query": "ILO future of work AI"
+    },
+    {
+      "title": "Will AI take Filipino jobs? The answer depends on what we do now - International Labour Organization",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQd3BWcG53Mk5Pa1VIV1p0Y0I0eUZUSzZoTEtOYlU0eUVDNERUT054U3BoOWhFVHhzNEg2MlpSRDVibHRTZHhETElJVzFKc21uNDJaM0d5MktRSmFMaHBXajU5M3diaElFWFplU1ptVlJqQzRBSXJlV2wyRC1vbGlrVkxOWHFhMzc1VjJlVUpscVNralItLVZTcw?oc=5",
+      "published": "Mon, 17 Aug 2026 07:00:00 GMT",
       "query": "ILO future of work AI"
     },
     {
@@ -1369,7 +1366,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.iza.org/en/jobs",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:13.138981"
+      "scanned_at": "2026-11-19T03:58:56.621938"
     },
     {
       "name": "CPB Netherlands Bureau for Economic Policy Analysis",
@@ -1377,7 +1374,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:13.979925"
+      "scanned_at": "2026-11-19T03:58:57.735036"
     },
     {
       "name": "DIW Berlin (German Institute for Economic Research)",
@@ -1385,7 +1382,7 @@
       "keywords_found": [],
       "status": "error: 403 Client Error: Forbidden for url: https://www.diw.de/en/diw_01.c.100406.en/jobs.html",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:14.366704"
+      "scanned_at": "2026-11-19T03:58:58.361548"
     },
     {
       "name": "IFAU Sweden (labour market policy evaluation)",
@@ -1393,7 +1390,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.ifau.se/en/About-IFAU/Vacancies/",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:15.018353"
+      "scanned_at": "2026-11-19T03:58:59.079773"
     },
     {
       "name": "IAB Germany (Institute for Employment Research)",
@@ -1401,7 +1398,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://iab.de/en/iab/jobs.aspx",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:16.159033"
+      "scanned_at": "2026-11-19T03:59:00.350038"
     },
     {
       "name": "WZB Berlin Social Science Center",
@@ -1409,7 +1406,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:17.644777"
+      "scanned_at": "2026-11-19T03:59:01.906237"
     },
     {
       "name": "ZEW Mannheim (Centre for European Economic Research)",
@@ -1417,7 +1414,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.zew.de/en/about-zew/careers",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:18.422908"
+      "scanned_at": "2026-11-19T03:59:02.925563"
     },
     {
       "name": "LISER Luxembourg (work, health, labour market)",
@@ -1425,7 +1422,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.liser.lu/jobs.cfm",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:20.976601"
+      "scanned_at": "2026-11-19T03:59:05.816345"
     },
     {
       "name": "OECD careers",
@@ -1433,7 +1430,7 @@
       "keywords_found": [],
       "status": "error: 403 Client Error: Forbidden for url: https://www.oecd.org/careers/",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:21.016917"
+      "scanned_at": "2026-11-19T03:59:05.921511"
     },
     {
       "name": "ILO Geneva careers",
@@ -1441,7 +1438,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.ilo.org/global/about-the-ilo/employment/lang--en/index.htm",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:21.470973"
+      "scanned_at": "2026-11-19T03:59:06.857642"
     },
     {
       "name": "World Bank jobs",
@@ -1449,7 +1446,7 @@
       "keywords_found": [],
       "status": "error: HTTPSConnectionPool(host='jobs.worldbank.org', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='jobs.worldbank.org', port=443): Failed to resolve 'jobs.worldbank.org' ([Errno -2] Name or service not known)\"))",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:21.556960"
+      "scanned_at": "2026-11-19T03:59:06.921646"
     },
     {
       "name": "Eurofound",
@@ -1457,7 +1454,7 @@
       "keywords_found": [],
       "status": "error: 429 Client Error: Too Many Requests for url: https://www.eurofound.europa.eu/en/about-eurofound/recruitment",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:21.824975"
+      "scanned_at": "2026-11-19T03:59:07.146717"
     },
     {
       "name": "CBS Statistics Netherlands",
@@ -1465,7 +1462,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:22.949093"
+      "scanned_at": "2026-11-19T03:59:08.699816"
     },
     {
       "name": "ONS UK Office for National Statistics",
@@ -1473,7 +1470,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:23.508171"
+      "scanned_at": "2026-11-19T03:59:09.339179"
     },
     {
       "name": "Destatis Germany Federal Statistical Office",
@@ -1481,7 +1478,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.destatis.de/EN/About-Us/Careers/_node.html",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:24.306864"
+      "scanned_at": "2026-11-19T03:59:10.342858"
     },
     {
       "name": "Statistik Austria",
@@ -1489,7 +1486,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:25.084801"
+      "scanned_at": "2026-11-19T03:59:11.319014"
     },
     {
       "name": "Ipsos careers",
@@ -1497,7 +1494,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:25.560781"
+      "scanned_at": "2026-11-19T03:59:11.573413"
     },
     {
       "name": "Kantar careers",
@@ -1505,7 +1502,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:26.279516"
+      "scanned_at": "2026-11-19T03:59:12.556848"
     },
     {
       "name": "GfK careers",
@@ -1513,7 +1510,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:26.784274"
+      "scanned_at": "2026-11-19T03:59:13.210554"
     },
     {
       "name": "Gallup careers",
@@ -1521,7 +1518,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.gallup.com/careers/home.aspx",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:27.024210"
+      "scanned_at": "2026-11-19T03:59:13.504783"
     },
     {
       "name": "BCG Henderson Institute careers",
@@ -1529,7 +1526,7 @@
       "keywords_found": [],
       "status": "error: 403 Client Error: Forbidden for url: https://www.bcg.com/careers",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:27.203776"
+      "scanned_at": "2026-11-19T03:59:13.663952"
     },
     {
       "name": "Deloitte Human Capital research careers",
@@ -1537,7 +1534,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.deloitte.com/global/en/pages/careers/articles/join-deloitte.html",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:27.636557"
+      "scanned_at": "2026-11-19T03:59:14.237425"
     },
     {
       "name": "Philips careers",
@@ -1545,7 +1542,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:28.263736"
+      "scanned_at": "2026-11-19T03:59:16.156005"
     },
     {
       "name": "Unilever careers",
@@ -1553,7 +1550,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:30.996219"
+      "scanned_at": "2026-11-19T03:59:16.405399"
     },
     {
       "name": "ING Group careers",
@@ -1561,7 +1558,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:31.821888"
+      "scanned_at": "2026-11-19T03:59:17.501026"
     },
     {
       "name": "Spotify jobs",
@@ -1569,7 +1566,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:32.009331"
+      "scanned_at": "2026-11-19T03:59:17.783383"
     },
     {
       "name": "Booking.com careers",
@@ -1577,7 +1574,7 @@
       "keywords_found": [],
       "status": "error: 403 Client Error: Forbidden for url: https://careers.booking.com/",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:32.134946"
+      "scanned_at": "2026-11-19T03:59:17.985176"
     },
     {
       "name": "3ie International Initiative for Impact Evaluation",
@@ -1585,7 +1582,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.3ieimpact.org/about-3ie/work-3ie",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:32.446936"
+      "scanned_at": "2026-11-19T03:59:18.516607"
     },
     {
       "name": "J-PAL Europe",
@@ -1599,14 +1596,9 @@
           "title": "Senior Data Scientist, Human Centered Weather Forecasts - Development Innovation Lab India",
           "url": "https://www.povertyactionlab.org/careers/senior-data-scientist-human-centered-weather-forecasts-development-innovation-lab-india-job",
           "deadline": null
-        },
-        {
-          "title": "(Senior) Atmospheric Scientist, Human-Centered Weather Forecasts - Development Innovation Lab",
-          "url": "https://www.povertyactionlab.org/careers/senior-atmospheric-scientist-human-centered-weather-forecasts-development-innovation-lab",
-          "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:02:32.672250"
+      "scanned_at": "2026-11-19T03:59:18.706814"
     },
     {
       "name": "Mathematica careers",
@@ -1614,7 +1606,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:33.008077"
+      "scanned_at": "2026-11-19T03:59:19.139883"
     },
     {
       "name": "ICF International Europe",
@@ -1622,15 +1614,15 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:34.949032"
+      "scanned_at": "2026-11-19T03:59:20.974146"
     },
     {
       "name": "Mercer careers",
       "url": "https://careers.mercer.com/",
       "keywords_found": [],
-      "status": "error: HTTPSConnectionPool(host='careers.mercer.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='careers.mercer.com', port=443) at 0x73adae6493d0>, 'Connection to careers.mercer.com timed out. (connect timeout=12)'))",
+      "status": "error: HTTPSConnectionPool(host='careers.mercer.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='careers.mercer.com', port=443) at 0x7915b7948110>, 'Connection to careers.mercer.com timed out. (connect timeout=12)'))",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:47.036139"
+      "scanned_at": "2026-11-19T03:59:33.096625"
     },
     {
       "name": "Willis Towers Watson careers",
@@ -1638,7 +1630,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:02:47.610248"
+      "scanned_at": "2026-11-19T03:59:33.938343"
     },
     {
       "name": "Korn Ferry careers",
@@ -1664,7 +1656,7 @@
           "deadline": null
         }
       ],
-      "scanned_at": "2026-11-18T04:02:47.730830"
+      "scanned_at": "2026-11-19T03:59:34.145260"
     }
   ],
   "japan_orgs_expanded": [
@@ -1674,7 +1666,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:21.551671"
+      "scanned_at": "2026-11-19T04:00:08.420191"
     },
     {
       "name": "Japan Productivity Center",
@@ -1682,7 +1674,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:22.250227"
+      "scanned_at": "2026-11-19T04:00:08.979618"
     },
     {
       "name": "World Bank Tokyo office",
@@ -1690,7 +1682,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:22.376265"
+      "scanned_at": "2026-11-19T04:00:09.206969"
     },
     {
       "name": "UNDP Japan",
@@ -1698,7 +1690,7 @@
       "keywords_found": [],
       "status": "error: 403 Client Error: Forbidden for url: https://www.undp.org/japan",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:22.481074"
+      "scanned_at": "2026-11-19T04:00:09.397251"
     },
     {
       "name": "UNICEF Japan",
@@ -1706,7 +1698,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:23.433071"
+      "scanned_at": "2026-11-19T04:00:10.360587"
     },
     {
       "name": "Persol Research and Consulting",
@@ -1714,7 +1706,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:24.079137"
+      "scanned_at": "2026-11-19T04:00:11.113226"
     },
     {
       "name": "Pasona Group",
@@ -1722,7 +1714,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:25.762580"
+      "scanned_at": "2026-11-19T04:00:12.855188"
     },
     {
       "name": "McKinsey Japan careers",
@@ -1730,7 +1722,7 @@
       "keywords_found": [],
       "status": "error: HTTPSConnectionPool(host='www.mckinsey.com', port=443): Read timed out. (read timeout=12)",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:37.834846"
+      "scanned_at": "2026-11-19T04:00:24.945411"
     },
     {
       "name": "Deloitte Japan careers",
@@ -1738,7 +1730,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.deloitte.com/jp/en/pages/careers/articles/careers-home.html",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:38.295190"
+      "scanned_at": "2026-11-19T04:00:25.650452"
     },
     {
       "name": "Accenture Japan careers",
@@ -1746,7 +1738,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.accenture.com/jp-en/careers",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:38.483618"
+      "scanned_at": "2026-11-19T04:00:25.977205"
     },
     {
       "name": "Intage Research",
@@ -1754,7 +1746,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:38.741499"
+      "scanned_at": "2026-11-19T04:00:27.185879"
     },
     {
       "name": "Macromill",
@@ -1762,7 +1754,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:40.314771"
+      "scanned_at": "2026-11-19T04:00:29.125013"
     },
     {
       "name": "NISTEP National Institute of Science and Technology Policy",
@@ -1770,7 +1762,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:42.073117"
+      "scanned_at": "2026-11-19T04:00:30.679846"
     },
     {
       "name": "National Institute of Population and Social Security Research",
@@ -1778,7 +1770,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://www.ipss.go.jp/s-info/e/Employ/Employ.asp",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:42.750922"
+      "scanned_at": "2026-11-19T04:00:31.224272"
     },
     {
       "name": "Nippon Foundation",
@@ -1786,7 +1778,7 @@
       "keywords_found": [],
       "status": "error: 404 Client Error: Not Found for url: https://en.nippon-foundation.or.jp/who/jobs",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:44.462973"
+      "scanned_at": "2026-11-19T04:00:32.660111"
     },
     {
       "name": "Sasakawa Peace Foundation",
@@ -1794,7 +1786,7 @@
       "keywords_found": [],
       "status": "error: 403 Client Error: Forbidden for url: https://www.spf.org/en/about/jobs.html",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:45.127685"
+      "scanned_at": "2026-11-19T04:00:33.143221"
     }
   ],
   "postdoc_boards_expanded": [
@@ -1804,7 +1796,7 @@
       "keywords_found": [],
       "status": "error: 403 Client Error: Forbidden for url: https://www.devex.com/jobs/search",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:50.396655"
+      "scanned_at": "2026-11-19T04:00:41.055114"
     },
     {
       "name": "ReliefWeb (UN/NGO jobs)",
@@ -1812,7 +1804,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:50.536050"
+      "scanned_at": "2026-11-19T04:00:41.344369"
     },
     {
       "name": "EuroBrussels (EU policy jobs)",
@@ -1820,7 +1812,7 @@
       "keywords_found": [],
       "status": "error: HTTPSConnectionPool(host='www.eurbrussels.com', port=443): Max retries exceeded with url: /jobs_list.html (Caused by NameResolutionError(\"HTTPSConnection(host='www.eurbrussels.com', port=443): Failed to resolve 'www.eurbrussels.com' ([Errno -2] Name or service not known)\"))",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:50.548639"
+      "scanned_at": "2026-11-19T04:00:41.399804"
     },
     {
       "name": "Euractiv Jobs",
@@ -1828,7 +1820,7 @@
       "keywords_found": [],
       "status": "nothing relevant",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:51.293136"
+      "scanned_at": "2026-11-19T04:00:42.676688"
     },
     {
       "name": "GaijinPot Jobs (English jobs in Japan)",
@@ -1836,7 +1828,7 @@
       "keywords_found": [],
       "status": "error: 403 Client Error: Forbidden for url: https://jobs.gaijinpot.com/",
       "postings_found": [],
-      "scanned_at": "2026-11-18T04:03:51.434182"
+      "scanned_at": "2026-11-19T04:00:42.820412"
     }
   ]
 }
